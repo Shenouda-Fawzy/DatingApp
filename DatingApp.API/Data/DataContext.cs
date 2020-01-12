@@ -11,6 +11,7 @@ namespace DatingApp.API.Data
         }
 
 // Virualt for lazy loading
-        public virtual DbSet<Value> Values { get; set; }
+        public DbSet<Value> Values { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }
