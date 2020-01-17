@@ -1,3 +1,4 @@
 {
-    "editor.fontFamily": "'source code pro', Consolas, 'Courier New', monospace"
+    "editor.fontFamily": "'source code pro', Consolas, 'Courier New', monospace",
+    "prettier.singleQuote": true
 }

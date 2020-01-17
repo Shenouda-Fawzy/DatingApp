@@ -56,7 +56,11 @@ namespace DatingApp.API.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login(UserForLoginDto userForLoginDto) 
         {
+
             User user = await _repo.Login(userForLoginDto.Username.ToLower(), userForLoginDto.Password);
+
+            if (user == null)
+                return Unauthorized();
 
             // Claim is which will be in the payload
             Claim [] claims = new[] 
